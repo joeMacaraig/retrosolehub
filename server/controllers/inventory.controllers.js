@@ -33,7 +33,16 @@ export const inventoryController = {
       console.log(err);
     }
   },
-  addInventoryItem: async (id, sneakerDetail) => {
+  getFeaturedInventory: async () => {
+    const inventoryCollection = Inventory;
+    try {
+      const products = await inventoryCollection.find({ featured: true });
+      return products != null ? products : {};
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  addInventoryItem: async (id) => {
     const inventoryCollection = Inventory;
     const sneakerCollection = Sneaker;
     try {
@@ -52,17 +61,26 @@ export const inventoryController = {
             {
               name: sneaker.name,
               images: { ...sneaker.images },
-              shoeSize: [4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13],
-              colorway: sneaker.colorway ?? "",
-              brand: sneaker.brand ?? "",
+              colorway: sneaker.colorway,
+              brand: sneaker.brand,
+              shoeType: sneaker.shoeType,
+              category: sneaker.category,
+              description: sneaker.description,
               marketPrice: sneaker.price,
-              price: sneakerDetail.price ?? 0,
-              showInCatalog: sneakerDetail.showInCatalog ?? false,
-              stock: sneakerDetail.stock ?? 0,
-              inventoryID: uuidv4(),
+              releaseDate: sneaker.releaseDate,
+              price: sneaker.price,
+              showInCatalog: true,
               sourceID: sneaker.id,
+              visible: true,
+              featured: fasle,
             },
             { upsert: true }
+          );
+          const updateSneakerStatus = await sneakerCollection.updateOne(
+            { id },
+            {
+              visible: false,
+            }
           );
           if (updateStatus && updateStatus.upsertedCount > 0) {
             return (
@@ -90,9 +108,8 @@ export const inventoryController = {
         const updateSneaker = await inventoryCollection.updateOne(
           { id },
           {
-            price: updates.price ?? sneaker.price,
-            showInCatalog: updates.showInCatalog ?? sneaker.showInCatalog,
-            stock: updates.stock ?? sneaker.stock,
+            price: updates.prices ?? sneaker.price,
+            featured: updates.featured ?? sneaker.featured,
           }
         );
         if (updateSneaker?.modifiedCount > 0) {

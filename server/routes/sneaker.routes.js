@@ -1,8 +1,9 @@
 import express from "express";
 import { sneakerController } from "../controllers/sneaker.controllers.js";
-const { getSneaker, getSneakers } = sneakerController;
+import { requireAuth } from "../middleware/auth.js";
+const { getSneaker, getSneakers, deleteSneakers } = sneakerController;
 
-const router = express.Router();
+const router = express.Router(requireAuth);
 
 router.get("/sneakers", async (req, res) => {
   const sneakers = await getSneakers({});
@@ -23,4 +24,12 @@ router.get("/sneakers/:id", async (req, res) => {
   }
 });
 
+router.delete("/sneakers/delete/:id"), async (req, res) => {
+  const id = req.params.id;
+  const deleteSneakerStatus = await deleteSneakers(id);
+  console.log(deleteSneakerStatus)
+  return res.status(deleteSneakerStatus.data.deleted === true ? 200 : 404).send({
+    ...deleteSneakerStatus,
+  });
+};
 export { router as sneakerRouter };

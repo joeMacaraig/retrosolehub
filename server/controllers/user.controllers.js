@@ -11,30 +11,18 @@ const createToken = (_id) => {
 export const userController = {
     loginUser : async (req, res) => {
         const userCollection = User;
-        const {email, password} = req.body;
+        const {username, password} = req.body;
 
         try {
             //using the login method in user model
-            const user = await userCollection.login(email,password)
+            const user = await userCollection.login(username,password)
 
             //creating a token
             const token = createToken(userCollection._id);
             
-            res.status(200).json({email, token});
+            res.status(200).json({username, token});
         } catch (e) {
             res.status(400).json({error: e.message});
         }
     }, 
-    signupUser : async (req, res) => {
-        const userCollection = User;
-        const {email, password} = req.body; 
-
-        try {
-            const user = await userCollection.signup(email,password)
-            const token = createToken(userCollection._id);
-            res.status(200).json({email, token});
-        } catch (e) {
-            res.status(400).json({error: e.message});
-        }
-    }
 }

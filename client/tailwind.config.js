@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'old': ['Old English Five'],
+        old: ["Old English Five"],
+        poppins: ["Poppins"],
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require("tailwind-scrollbar-hide")],
+};

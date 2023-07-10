@@ -17,6 +17,9 @@ const SneakerSchema = new Schema(
     colorway: {
         type: String, 
     },
+    condition: {
+        type: String,
+    },
     description: {
         type: String, 
     }, 

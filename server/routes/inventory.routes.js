@@ -1,7 +1,8 @@
 import express from "express";
 import { inventoryController } from "../controllers/inventory.controllers.js";
+import {requireAuth} from "../middleware/auth.js";
 
-const inventoryRouter = express.Router();
+const inventoryRouter = express.Router(requireAuth);
 const {
   getInventory,
   getInventoryItem,
@@ -48,7 +49,6 @@ inventoryRouter.post("/inventory/add/:id", async (req, res) => {
 inventoryRouter.put("/inventory/update/:id", async (req, res) => {
   const id = req.params.id;
   const updates = req.body;
-  // "updates" should look like this => { price, stock, showInCatalog }
   const updateSneaker = await updateInventoryItem(id, updates);
   return updateSneaker != null
     ? res.status(200).send({
