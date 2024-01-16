@@ -27,7 +27,7 @@ export const Navigation = () => {
         href="/"
         as={NavLink}
       >
-        RetroSoleHub
+        Dirty Soles
       </a>
       <ul className="hidden md:flex">
         <li className="p-4">

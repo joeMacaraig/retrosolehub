@@ -31,9 +31,9 @@ export const About = () => {
   return (
     <div className="h-auto w-full flex flex-col justify-center items-center">
       <div className="w-full justify-evenly items-center flex flex-wrap md:flex-nowrap p-10">
-        <img className="w-[400px] m-2" src="/R.png" />{" "}
+        <img className="w-[400px] m-2" src="/dirtysole-icon.png" />{" "}
         <div className="h-auto w-[600px] m-2 p-5 text-justify text-lg">
-          <p className="text-3xl font-medium text-lime-800 mb-2">Our Missions</p>
+          <p className="text-3xl font-medium text-red-700 mb-2">Our Missions</p>
           <p>
             At our core, we are driven by a mission to make exclusive and
             authentic shoe's easier for people to purchase the right shoes. We
@@ -67,13 +67,13 @@ export const About = () => {
             </ol>
             <h2 className="font-semibold">Buying & Shipping</h2>
             <p className="text-slate-600 py-2 mb-5">
-              RetroSoleHub do not ship items or products. All the products shown
+              Dirtysoles do not ship items or products. All the products shown
               on our website is what we have in our store. You can always give
               us a call or come in store to see if we have your size. We do not
               hold shoes for any customers, it is first come first serve.
             </p>
             <h2 className="font-semibold">
-              Selling? RetroSoleHub Looks to Buy!
+              Selling? Dirty Soles Looks to Buy!
             </h2>
             <p className="text-slate-600 py-2 mb-5">
               We only buy authentic and exlusive shoes from our customers. Shoe
@@ -104,7 +104,7 @@ export const About = () => {
               </div>
               <div className="flex items-center">
                 <TfiEmail />
-                <p className="w-full mx-2">retrosolehub@gmail.com</p>
+                <p className="w-full mx-2">dirtysolesresell@gmail.com</p>
               </div>
             </div>
           </div>

@@ -61,7 +61,7 @@ export const Home = () => {
         </div>
         <div className="h-full w-full flex flex-col justify-center items-center my-10 px-5">
           <p className="text-4xl tracking-tight font-semibold">
-            Welcome To RetroSoleHub
+            Welcome To Dirty Soles
           </p>
           <p className="pt-1 mb-5">
             Discover the elegance of exclusive shoes that elevate your style.
@@ -79,7 +79,7 @@ export const Home = () => {
         <p className="w-full text-3xl font-semibold pl-10 mt-10">
           Featured
         </p>
-        <div className="w-full h-full flex justify-center relative items-center p-5">
+        <div className="w-full h-full flex justify-center items-center relative items-center p-5">
           {" "}
           <MdChevronLeft
             className="rounded-full bg-slate-900 fill-slate-100 cursor-pointer hover:opacity-50"
