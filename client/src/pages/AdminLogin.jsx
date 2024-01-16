@@ -1,23 +1,23 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import { useLogin } from "../hooks/useLogin";
 
 export const AdminLogin = () => {
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const { login } = useLogin("");
   const onSubmit = async (e) => {
     e.preventDefault();
     await login(username, password);
-  }
+  };
   return (
     <div className="h-full w-full flex items-center justify-center p-5">
       <div className="w-[500px] h-[70vh] flex items-center justify-center flex-col my-20">
         <div className="w-full mb-5">
           <h1 className="text-4xl">
-            Welcome to Dirty Soles, <br></br> Sign in Admin.
+            Welcome to RetroSoleHub 👋🏽, <br></br> Sign in Admin.
           </h1>
           <p className="my-4">
-            This page is for admin users of Dirty Soles only.
+            This page is for admin users of RetroSoleHub only.
           </p>
         </div>
         <form className="w-full" onSubmit={onSubmit}>
@@ -30,7 +30,7 @@ export const AdminLogin = () => {
               type="username"
               name="username"
               id="username"
-              placeholder="company@example.com"
+              placeholder="username"
               className="border-2 border-black p-3 w-full"
               onChange={(e) => setUsername(e.target.value)}
               value={username}
@@ -51,15 +51,9 @@ export const AdminLogin = () => {
               value={password}
             />
           </div>
-          <a
-            href="#"
-            className="block text-sm font-medium underline text-center mt-5 mb-10"
-          >
-            Forgot Password?
-          </a>
           <button
             type="submit"
-            className="w-full bg-black text-white font-light p-4 text-center"
+            className="w-full bg-black text-white font-light p-4 text-center mt-10"
           >
             Sign In
           </button>
