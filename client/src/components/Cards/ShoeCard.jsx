@@ -24,7 +24,7 @@ export const Card = ({
         style={{ height: `${h}px`, width: `${w}px` }}
       >
         <div className="flex w-full justify-end p-2">
-          <img className="h-[80px]" src="/dirtysole-icon.png" alt="logo" />
+          <div className="h-[80px] text-xl font-old">RSH</div>
         </div>
         <div className="w-full px-10  z-0">
           <img className="h-full w-full" src={img} alt={name} />
@@ -50,7 +50,16 @@ export const Card = ({
     </Link>
   );
 };
-export const ShoeCard = ({ id, name, img, price, releaseDate, colorway, h=600, w=400}) => {
+export const ShoeCard = ({
+  id,
+  name,
+  img,
+  price,
+  releaseDate,
+  colorway,
+  h = 600,
+  w = 400,
+}) => {
   return (
     <div
       key={id}
@@ -59,7 +68,7 @@ export const ShoeCard = ({ id, name, img, price, releaseDate, colorway, h=600, w
       style={{ height: `${h}px`, width: `${w}px` }}
     >
       <div className="flex w-full justify-end p-2">
-        <img className="h-[80px]" src="/dirtysole-icon.png" alt="logo" />
+        <div className="h-[80px] text-2xl font-old">RSH</div>
       </div>
       <div className="w-full px-10">
         <img className="h-full w-full" src={img} alt={name} />
