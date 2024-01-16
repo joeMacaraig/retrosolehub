@@ -50,14 +50,14 @@ export const Footer = () => {
         <div className="flex flex-row flex-wrap justify-evenly items-center p-6 mb-5">
           <FooterCard
             icon={<MdOutlineVerified size={25} />}
-            title="Dirty Soles Verification"
+            title="RetroSoleHub Verification"
             desc="Our verification, is our own designation and means that we
                 inspect every item carefully everytime."
           />
           <FooterCard
             icon={<FaHandHoldingHeart size={23} />}
             title="Our Promise"
-            desc="Dirty Soles strive to earn and keep your trust. If we make a
+            desc="RetroSoleHub strive to earn and keep your trust. If we make a
             mistake, we'll make it right."
           />
           <FooterCard
@@ -86,7 +86,7 @@ export const Footer = () => {
                 class="w-1/2 border border-gray-300 text-gray-900 text-sm rounded-sm focus:border-blue-500 block w-full p-2.5 mr-5"
                 placeholder="Email Address"
               />
-              <button className="w-full w-1/2 bg-white cursor-pointer text-red-600 p-2.5">
+              <button className="w-full w-1/2 bg-white cursor-pointer text-lime-700 p-2.5">
                 Sign up
               </button>
             </form>
@@ -109,8 +109,8 @@ export const Footer = () => {
             <FaCcPaypal size={"2em"} />
           </div>
         </div>
-        <div className="text-center tracking-tight italic font-medium bg-zinc-900 tracking-wide p-3">
-          &copy;2022-{getYear()} Dirty Soles
+        <div className="text-center italic font-medium bg-zinc-900 tracking-wide p-3">
+          &copy;2022-{getYear()} RetroSoleHub
         </div>
       </div>
     </>

@@ -7,6 +7,9 @@ module.exports = {
         old: ["Old English Five"],
         poppins: ["Poppins"],
       },
+      colors: {
+        sole: "#CBD6CC",
+      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],
