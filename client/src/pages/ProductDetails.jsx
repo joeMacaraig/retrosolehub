@@ -64,7 +64,7 @@ export const ProductDetails = () => {
               title="Shipping and Returns"
               click={shipping}
               setClick={setShipping}
-              desc="Dirty Soles do not ship items or products. All purchases are made instore. We do not hold items for customers. ALL PURCHASES ARE FINAL.
+              desc="RetroSoleHub do not ship items or products. All purchases are made instore. We do not hold items for customers. ALL PURCHASES ARE FINAL.
               NO REFUNDS unless we make a mistake on our side."
             />
             <DropDownButton

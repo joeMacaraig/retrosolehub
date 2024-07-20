@@ -24,7 +24,7 @@ export const AdminLogin = () => {
           {/* username */}
           <div className="mb-2">
             <label for="username" className="block mb-2">
-              Email
+              Username
             </label>
             <input
               type="username"
