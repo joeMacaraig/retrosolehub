@@ -72,7 +72,7 @@ export const inventoryController = {
               showInCatalog: true,
               sourceID: sneaker.id,
               visible: true,
-              featured: fasle,
+              featured: false,
             },
             { upsert: true }
           );

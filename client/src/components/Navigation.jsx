@@ -73,7 +73,7 @@ export const Navigation = () => {
         }
       >
         <h1 className="w-full text-3xl text-white m-4 font-bold font-old font-semibold tracking-tight">
-          Dirty Soles
+          RetroSoleHub
         </h1>
         <li className="p-4 hover:text-black hover:bg-slate-100 border-b border-gray-600 duration-300">
           {" "}
