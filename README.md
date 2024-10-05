@@ -1,5 +1,5 @@
 
-#Retrosolehub
+# Retrosolehub
 
 ## Introduction
 
@@ -7,11 +7,11 @@ This is a conecept project for a resell shoe store owner. Retrosolehub is a web 
 
 ## 💻 Tech Stack
 
-Next.js
-Typescript
-TailwindCSS
-ShadCN
-MongoDB
+* Next.js
+* Typescript
+* TailwindCSS
+* ShadCN
+* MongoDB
 
 ## 🔋 Features
 👉 Register as a Customer: Users can sign up and create a personal profile as a customer.
