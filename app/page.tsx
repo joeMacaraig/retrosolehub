@@ -1,10 +1,18 @@
-import { Navbar } from "@/components/Navbar";
-import Image from "next/image";
+import { SneakerCard } from "@/components/SneakerCard";
 
-export default function Home() {
+const Home = async () => {
+  const response = await fetch("http://localhost:3000/api/featured");
+  const data = await response.json();
   return (
-    <div>
-      Home
-    </div>
+    <main>
+      <div>Home</div>
+      <div className="flex items-center gap-4 overflow-scroll">
+        {data?.sneakers.map((item: ProductSneaker) => (
+          <SneakerCard {...item} />
+        ))}
+      </div>
+    </main>
   );
-}
+};
+
+export default Home;

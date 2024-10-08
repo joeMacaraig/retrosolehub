@@ -6,17 +6,18 @@ import { databaseConnect } from "../db";
 export const getSneakers = async () => {
   try {
     await databaseConnect();
-    const data = await Sneaker.find({});
-    return data.map((sneaker) => sneaker.toObject());
+    const sneakers = await Sneaker.find({});
+    return sneakers.map((sneaker) => sneaker.toObject());
   } catch (error) {
     console.log(`FAILED TO GET SNEAKERS :: ${error}`);
   }
 };
 export const getSneaker = async (id: string) => {
   try {
+    await databaseConnect();
     if (id.length) {
       const sneaker = await Sneaker.findOne({ id });
-      return sneaker;
+      return sneaker ? sneaker : {};
     } else {
       return {};
     }
@@ -26,6 +27,7 @@ export const getSneaker = async (id: string) => {
 };
 export const deleteSneaker = async (id: string) => {
   try {
+    await databaseConnect();
     const sneaker = await Sneaker.findOne({ id });
     if (sneaker != null) {
       const deleteSneaker = await Sneaker.deleteOne({ id });
