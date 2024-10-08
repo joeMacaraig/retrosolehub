@@ -22,6 +22,16 @@ export const GET = async (
   }
 };
 
+export const POST = async (
+  request: Request,
+  { params }: { params: { id: string } }
+) => {};
+
+export const PUT = async (
+  request: Request,
+  { params }: { params: { id: string } }
+) => {};
+
 export const DELETE = async (
   request: Request,
   { params }: { params: { id: string } }
