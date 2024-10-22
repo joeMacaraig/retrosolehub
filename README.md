@@ -25,23 +25,23 @@ This is a conecept project for a resell shoe store owner. Retrosolehub is a web 
 
 ### Home Page
 
-![Alt Text](/RetroSoleHub/client/public/Preview-Home.png)
+![Alt Text](client/public/Preview-Home.png)
 
 ### Product Page
 
-![Alt Text](/RetroSoleHub/client/public/Preview-Product.png)
+![Alt Text](client/public/Preview-Product.png)
 
 ### About Page
 
-![Alt Text](/RetroSoleHub/client/public/Preview-About.png)
+![Alt Text](client/public/Preview-About.png)
 
 ### Admin Login Page
 
-![Alt Text](/RetroSoleHub/client/public/Preview-Login.png)
+![Alt Text](client/public/Preview-Login.png)
 
 ### Admin Page
 
-![Alt Text](/RetroSoleHub/client/public/Preview-Admin.png)
+![Alt Text](client/public/Preview-Admin.png)
 
 ### Next.js
 
