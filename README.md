@@ -13,9 +13,6 @@ This is a conecept project for a resell shoe store owner. Retrosolehub is a web 
 * MongoDB
 
 ## 🔋 Features
-👉 Register as a Customer: Users can sign up and create a personal profile as a customer.
-
-👉 Save a product: Users can save and share a product.
 
 👉 Manage Inventory: Adminitrators can efficiently view and handle inventory.
 
